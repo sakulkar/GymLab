@@ -72,6 +72,12 @@ class QAgent(object):
         if foget_table:
             self.q_table = {}
 
+    def update_learning_rate(self, alpha):
+        self.ALPHA = alpha
+
+    def update_exploration_rate(self, epsilon):
+        self.EPSILON = epsilon
+
     def reinforce_(self, state, last_reward):
         """ Improve agent based on current experience (last_state, last_action, last_reward, state)
         """
